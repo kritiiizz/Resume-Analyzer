@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700">
+<style>
+.bg{fill:#fff}.ascii{font:6px monospace;white-space:pre;fill:#111}
+.title{font:700 26px Consolas,monospace}.label{font:700 18px Consolas,monospace;fill:#b35b00}
+.value{font:18px Consolas,monospace;fill:#1d3d8f}
+</style>
+<rect class="bg" width="100%" height="100%"/>
+<text x="20" y="20" class="ascii" xml:space="preserve">
+PASTE CONTENTS OF ascii-art.txt HERE (or generate automatically with profile.py)
+</text>
+<text x="620" y="50" class="title">RONIT RAJ</text>
+<text x="620" y="90" class="label">Role:</text><text x="820" y="90" class="value">Computer Science Student</text>
+<text x="620" y="120" class="label">College:</text><text x="820" y="120" class="value">Arya College of Engineering</text>
+<text x="620" y="150" class="label">Skills:</text><text x="820" y="150" class="value">Python • Java • C++ • React • Git</text>
+</svg>
