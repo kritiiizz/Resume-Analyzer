@@ -1,0 +1,10 @@
+Model,Representation,Val Macro-F1,Test Macro-F1,Test Accuracy
+BiGRU + Attention,GloVe 300d,0.8571,0.8273,0.8715
+CNN + BiLSTM + Attention,GloVe 300d,0.8229,0.8163,0.8594
+TextCNN,GloVe 300d,0.7688,0.78,0.8353
+CNN + BiLSTM + Attention,Random embeddings,0.7706,0.775,0.8353
+BiLSTM (max-pool),GloVe 300d,0.8195,0.7637,0.8112
+TextCNN,GloVe 300d (frozen),0.7713,0.7355,0.8032
+TextCNN,Random embeddings,0.7827,0.7296,0.7992
+BiLSTM + Attention,GloVe 300d,0.7643,0.7109,0.7711
+BiLSTM + Attention,Random embeddings,0.6756,0.6598,0.7229

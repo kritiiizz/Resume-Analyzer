@@ -1,0 +1,4 @@
+Model,Representation,Job title,Max len,mean,std,count
+BiGRU + Attention,GloVe 300d,kept,512,0.8069,0.0257,3
+CNN + BiLSTM + Attention,GloVe 300d,kept,512,0.8153,0.0061,3
+TextCNN,GloVe 300d,kept,512,0.7565,0.0203,3
