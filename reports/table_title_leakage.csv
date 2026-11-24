@@ -1,0 +1,6 @@
+Model,Representation,kept,removed,drop
+BiGRU + Attention,GloVe 300d,0.8273,0.7904,0.0369
+BiLSTM + Attention,GloVe 300d,0.7109,0.7555,-0.0446
+CNN + BiLSTM + Attention,GloVe 300d,0.8163,0.7833,0.033
+TextCNN,GloVe 300d,0.78,0.7418,0.0382
+TextCNN,Random embeddings,0.7296,0.7256,0.004

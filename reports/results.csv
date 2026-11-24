@@ -1,0 +1,23 @@
+Model,Representation,Val Macro-F1,Test Macro-F1,Test Accuracy,Test Weighted-F1,Job title,Max len,Truncation,Params,Train time (s),Best epoch,Seed,Run
+TextCNN,Random embeddings,0.7827,0.7296,0.7992,0.7904,kept,512,head,6946524,64.4,16,42,textcnn_random_title_len512_s42
+TextCNN,Random embeddings,0.7987,0.7547,0.8233,0.8128,kept,1000,head,6946524,178.0,21,42,textcnn_random_title_len1000_s42
+TextCNN,Random embeddings,0.7568,0.7256,0.7992,0.7863,removed,512,head,6938124,85.6,17,42,textcnn_random_notitle_len512_s42
+BiLSTM + Attention,Random embeddings,0.6756,0.6598,0.7229,0.7228,kept,512,head,7486800,237.8,28,42,bilstm_lstm_att_random_title_len512_s42
+CNN + BiLSTM + Attention,Random embeddings,0.7706,0.775,0.8353,0.834,kept,512,head,6976836,323.9,18,42,cnn_bilstm_lstm_att_random_title_len512_s42
+BiLSTM + Attention,GloVe 300d,0.7643,0.7109,0.7711,0.7691,kept,512,head,7486800,201.8,19,42,bilstm_lstm_att_glove_title_len512_s42
+TextCNN,GloVe 300d,0.7688,0.78,0.8353,0.8289,kept,512,head,6946524,74.2,15,42,textcnn_glove_title_len512_s42
+CNN + BiLSTM + Attention,GloVe 300d,0.8229,0.8163,0.8594,0.8565,kept,512,head,6976836,122.4,17,42,cnn_bilstm_lstm_att_glove_title_len512_s42
+TextCNN,GloVe 300d,0.7581,0.7418,0.8112,0.799,removed,512,head,6938124,69.8,13,42,textcnn_glove_notitle_len512_s42
+BiLSTM + Attention,GloVe 300d,0.7926,0.7555,0.8032,0.7993,removed,512,head,7478400,268.8,21,42,bilstm_lstm_att_glove_notitle_len512_s42
+CNN + BiLSTM + Attention,GloVe 300d,0.7972,0.7833,0.8313,0.8316,removed,512,head,6968436,121.6,16,42,cnn_bilstm_lstm_att_glove_notitle_len512_s42
+TextCNN,GloVe 300d,0.7761,0.7379,0.8072,0.7969,kept,1000,head,6946524,139.3,14,42,textcnn_glove_title_len1000_s42
+TextCNN,GloVe 300d (frozen),0.7713,0.7355,0.8032,0.794,kept,512,head,367524,65.3,19,42,textcnn_glove-frozen_title_len512_s42
+BiGRU + Attention,GloVe 300d,0.8571,0.8273,0.8715,0.8678,kept,512,head,7277904,1820.7,24,42,bilstm_gru_att_glove_title_len512_s42
+BiLSTM (max-pool),GloVe 300d,0.8195,0.7637,0.8112,0.8074,kept,512,head,7420752,170.2,14,42,bilstm_lstm_max_glove_title_len512_s42
+BiGRU + Attention,GloVe 300d,0.7982,0.7904,0.8353,0.8317,removed,512,head,7269504,829.0,22,42,bilstm_gru_att_glove_notitle_len512_s42
+BiGRU + Attention,GloVe 300d,0.8521,0.8155,0.8635,0.8592,kept,512,head,7277904,574.3,14,7,bilstm_gru_att_glove_title_len512_s7
+BiGRU + Attention,GloVe 300d,0.8235,0.778,0.8233,0.8287,kept,512,head,7277904,936.2,12,123,bilstm_gru_att_glove_title_len512_s123
+CNN + BiLSTM + Attention,GloVe 300d,0.8335,0.8208,0.8594,0.8615,kept,512,head,6976836,90.6,9,7,cnn_bilstm_lstm_att_glove_title_len512_s7
+CNN + BiLSTM + Attention,GloVe 300d,0.8348,0.8088,0.8635,0.8622,kept,512,head,6976836,71.2,10,123,cnn_bilstm_lstm_att_glove_title_len512_s123
+TextCNN,GloVe 300d,0.7728,0.7446,0.7871,0.7877,kept,512,head,6946524,41.5,8,7,textcnn_glove_title_len512_s7
+TextCNN,GloVe 300d,0.7482,0.745,0.8153,0.8049,kept,512,head,6946524,57.9,9,123,textcnn_glove_title_len512_s123
