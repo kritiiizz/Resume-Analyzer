@@ -7,8 +7,8 @@ from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_groq import ChatGroq
 
-from models import Resume
-from prompts import resume_prompt
+from .models import Resume
+from .prompts import resume_prompt
 
 
 # -----------------------------------------------------
