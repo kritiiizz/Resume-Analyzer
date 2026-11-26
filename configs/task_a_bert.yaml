@@ -1,0 +1,37 @@
+# Task A transformer configuration, independent of classical baseline settings.
+# 128+382 WordPiece tokens plus [CLS] and [SEP] = 512 model positions.
+# Citation: Sun et al. (2019), How to Fine-Tune BERT for Text Classification?,
+# section 5.3.1, arXiv:1905.05583.
+model_name: distilbert/distilbert-base-uncased
+model_revision: main
+model_family: distilbert
+truncation:
+  strategy: head_tail
+  first_tokens: 128
+  last_tokens: 382
+  max_length: 512
+preprocessing:
+  normalize_unicode: true
+  mask_pii: true
+  lowercase: true
+  remove_title_line: false
+training:
+  seed: 42
+  epochs: 4
+  learning_rate: 0.00002
+  weight_decay: 0.01
+  warmup_ratio: 0.10
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 8
+  max_grad_norm: 1.0
+  precision: fp32
+  gradient_checkpointing: false
+  early_stopping_patience: 2
+  dataloader_num_workers: 0
+  pad_to_multiple_of: 64
+  save_total_limit: 2
+  logging_steps: 20
+evaluation:
+  primary_metric: macro_f1
+  score_type: uncalibrated_softmax_probability

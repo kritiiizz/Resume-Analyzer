@@ -1,0 +1,43 @@
+dataset:
+  label_column: Category
+  raw_path: data/raw/Resume.csv
+  source: snehaanbhawal/resume-dataset
+  text_column: Resume_str
+features:
+  max_df: 0.95
+  min_df: 2
+  ngram_range:
+  - 1
+  - 2
+  sublinear_tf: true
+paths:
+  metadata_dir: data/metadata_no_title
+  model_dir: models/task_a_no_title/seed_42
+  report_dir: reports/task_a_no_title/seed_42
+  split_dir: data/splits_no_title
+preprocessing:
+  lemmatize: false
+  lowercase: true
+  mask_pii: true
+  normalize_skill_synonyms: false
+  remove_stopwords: false
+  remove_title_line: false
+split:
+  seed: 42
+  test_fraction: 0.1
+  train_fraction: 0.8
+  val_fraction: 0.1
+task: resume_category_classification
+training:
+  c_grid:
+  - 0.1
+  - 1.0
+  - 10.0
+  class_weights:
+  - null
+  - balanced
+  nb_alpha_grid:
+  - 0.5
+  - 1.0
+  - 2.0
+  scoring: macro_f1
