@@ -4,9 +4,9 @@ import sys
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 
-from models import Resume, JDMatchResult
-from prompts import jd_match_prompt
-from parser import (
+from .models import Resume, JDMatchResult
+from .prompts import jd_match_prompt
+from .parser import (
     get_llm,
     parse_resume_from_path,
 )
