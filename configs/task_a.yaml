@@ -1,0 +1,33 @@
+task: resume_category_classification
+dataset:
+  source: snehaanbhawal/resume-dataset
+  raw_path: data/raw/Resume.csv
+  text_column: Resume_str
+  label_column: Category
+split:
+  seed: 42
+  train_fraction: 0.80
+  val_fraction: 0.10
+  test_fraction: 0.10
+preprocessing:
+  mask_pii: true
+  lowercase: true
+  remove_stopwords: false
+  lemmatize: false
+  normalize_skill_synonyms: false
+  remove_title_line: false
+features:
+  ngram_range: [1, 2]
+  min_df: 2
+  max_df: 0.95
+  sublinear_tf: true
+training:
+  scoring: macro_f1
+  c_grid: [0.1, 1.0, 10.0]
+  class_weights: [null, balanced]
+  nb_alpha_grid: [0.5, 1.0, 2.0]
+paths:
+  split_dir: data/splits
+  metadata_dir: data/metadata
+  model_dir: models/task_a
+  report_dir: reports/task_a
